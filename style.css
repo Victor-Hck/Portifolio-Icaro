@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 3px solid black; */
+    background-color: #121212;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #A1A1A1;
+}
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    /* background-color: lightgray; */
+    justify-content: center;
+
+}
+section {
+    /* border: 3px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    display: flex;
+    /* border: 3px solid black; */
+    text-align: center;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: #121212;
+    color: white;
+    border-top: 1px solid #A1A1A1;
+}
+
+.center-text {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+    /* border: 3px solid black; */
+}
+.center-text h1 {
+    font-size: 60px;
+    padding: 10px;
+    color: #fff;
+}
+.center-text h2 {
+    font-size: 40px;
+    padding: 10px;
+    color: #fff;
+}
+.center-text p {
+    padding: 10px;
+    font-size: 20px;
+    color: #A1A1A1;
+}
+.icons {
+    display: flex;
+    gap: 5px;
+    /* border: 2px solid white; */
+}
+.icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+/* EFEITO ESPECÍFICO DE CADA ÍCONE */
+.icons a.linkedin:hover {
+    background: #333;
+    color: #0e76a8;  /* azul linkedin */
+}
+
+.icons a.instagram:hover {
+    background: #333;
+    color: #e1306c;  /* rosa instagram */
+}
+.icons a.email:hover {
+    background: #333;
+    color: #ff4d4d;  /* vermelho */
+}
+.navgation {
+    display: flex;
+    gap: 30px;
+    /* border: 3px solid white; */
+}
+.navgation a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    color: #A1A1A1;
+    transition: all 0.3s ease;
+}
+.navgation a:hover {
+    color: #fff;
+}
