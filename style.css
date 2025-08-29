@@ -35,6 +35,8 @@ section {
     align-items: center;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 footer {
     display: flex;
@@ -119,4 +121,16 @@ footer {
 }
 .navgation a:hover {
     color: #fff;
+}
+.imagem img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+    transition: 0.3s ease-in-out;
+}
+.imagem img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
 }
