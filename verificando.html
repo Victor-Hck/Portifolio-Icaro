@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Engenheiro Elétrico</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto Mono', monospace;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+    }
+
+    header {
+      background: #0f0f0f;
+      padding: 20px;
+      border-bottom: 1px solid #00ff99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #00ff99;
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #e0e0e0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ff99;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00ff99;
+      margin-bottom: 20px;
+      border-left: 4px solid #00ff99;
+      padding-left: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border: 1px solid #00ff99;
+      border-radius: 8px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00ff99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #00ff99;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Prof. Fulano</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Engenheiro Elétrico, pesquisador e professor com experiência em projetos, automação e eletrônica.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiência</h2>
+    <div class="grid">
+      <div class="card">Empresa X - Engenheiro Eletricista</div>
+      <div class="card">Universidade Y - Professor Doutor</div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="grid">
+      <div class="card">MATLAB</div>
+      <div class="card">AutoCAD</div>
+      <div class="card">Microcontroladores</div>
+      <div class="card">Eletrônica</div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="card">Projeto de Iluminação</div>
+      <div class="card">Energia Renovável</div>
+      <div class="card">Controle de Motores</div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: prof.fulano@email.com</p>
+    <p>LinkedIn: linkedin.com/in/proffulano</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Prof. Fulano - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
