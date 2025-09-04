@@ -91,6 +91,11 @@ footer {
     color: white;
     transition: all 0.3s ease;
 }
+.icons p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* EFEITO ESPECÍFICO DE CADA ÍCONE */
 .icons a.linkedin:hover {
     background: #333;
