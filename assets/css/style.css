@@ -91,15 +91,20 @@ footer {
     color: white;
     transition: all 0.3s ease;
 }
+.icons p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* EFEITO ESPECÍFICO DE CADA ÍCONE */
 .icons a.linkedin:hover {
     background: #333;
     color: #0e76a8;  /* azul linkedin */
 }
 
-.icons a.instagram:hover {
+.icons a.whatsapp:hover {
     background: #333;
-    color: #e1306c;  /* rosa instagram */
+    color: #25d366;  /* verde whatsapp */
 }
 .icons a.email:hover {
     background: #333;
@@ -135,36 +140,111 @@ footer {
     transform: scale(1.03);
     box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
 }
+/* ====== VISUAL MOCKUP ====== */
+:root {
+    --bg: #121212;
+    --card: #1a1b1e;
+    --muted: #9aa0a6;
+    --text: #e6e6e6;
+    --chip: #232427;
+    --chip-border: #2e2f33;
+    --chip-active: #e6e6e6;
+    --accent: #22d3a6; /* verde-neon */
+    --shadow: 0 8px 24px rgba(0,0,0,.35);
+    --radius: 14px;
+}
+.skills-section {
+    background: var(--bg);
+    color: var(--text);
+    padding: 40px 20px 80px;
+}
 
-/* skill páginas */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-    }
-.skill-card {
-    background: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-    transition: transform 0.2s ease;
-    }
-.skill-card:hover {
-    transform: translateY(-5px);
-    }
-.skill-card h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #00ff99;
-    }
-.skill-card ul {
-    list-style: none;
-    padding: 0;
-    }
-.skill-card li {
-    background: #2b2b2b;
-    margin: 5px 0;
-    padding: 5px 10px;
-    border-radius: 5px;
+.skills-header {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+}
+
+.skills-title {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px; padding: 10px;
+}
+.skills-title h2 {
+    font-size: 32px; margin: 0;
+}
+.skills-icon {
+    display:inline-grid; place-items:center; width:36px; height:36px;
+    border-radius: 8px; background: #141518; box-shadow: var(--shadow);
+}
+
+.skills-filters {
+    display: flex; flex-wrap: wrap; gap: 10px;
+}
+.skills-chip {
+    background: var(--chip);
+    border: 1px solid var(--chip-border);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 999px;
     font-size: 14px;
-    }
+    cursor: pointer;
+    transition: transform .12s ease, border-color .2s ease, color .2s ease;
+    user-select: none;
+}
+.skills-chip:hover { transform: translateY(-1px); }
+.skills-chip.active {
+    color: #111; background: var(--chip-active);
+    border-color: var(--chip-active);
+}
+.skills-grid {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+/* 3 colunas em desktop, 2 no tablet, 1 no mobile */
+.skills-card { grid-column: span 4; }
+@media (max-width: 1024px) { .skills-card { grid-column: span 6; } }
+@media (max-width: 640px)  { .skills-card { grid-column: span 12; } }
+
+.skills-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    border: 1px solid #24262a;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.skills-card:hover {
+    transform: translateY(-4px);
+    border-color: #2b2d31;
+    box-shadow: 0 12px 32px rgba(0,0,0,.45);
+}
+.skills-card h3 {
+    margin: 0 0 8px; font-size: 18px; letter-spacing:.2px;
+}
+.skills-card p {
+    margin: 0 0 14px; color: var(--muted); line-height: 1.55;
+}
+.skills-tags {
+    display:flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 6px; }
+.skills-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    background: #202226;
+    border: 1px solid #2b2d31;
+    border-radius: 999px;
+    color: #ccd1d6;
+    white-space: nowrap;
+}
+.skills-cta {
+    display: flex; gap: 10px; margin-top: 14px;
+}
+.btn-ghost, .btn-solid {
+    font-size: 13px; padding: 8px 12px; border-radius: 10px; cursor: pointer;
+    border: 1px solid #2b2d31; background: #191a1d; color: var(--text);
+    transition: background .15s ease, border-color .15s ease, transform .12s ease;
+}
+.btn-solid { background: #121314; border-color: #303236; }
+.btn-ghost:hover, .btn-solid:hover { transform: translateY(-1px); }
+.btn-solid { color: #e9fffb; background: #13342d; border-color: #1a5f50; }
